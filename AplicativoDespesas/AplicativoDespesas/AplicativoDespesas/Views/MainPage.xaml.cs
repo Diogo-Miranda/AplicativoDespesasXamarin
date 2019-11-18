@@ -22,6 +22,15 @@ namespace AplicativoDespesas.Views
             this.FindByName<ListView>("ListDespesas").ItemsSource = database.Conexao().Table<Despesa>().ToList();
         }
 
+        public void Pagar_Clicked(object sender, EventArgs e)
+        {
+            Button botao = ((Button)sender);
+           
+            Database database = new Database();
+
+            database.Conexao().Delete(botao.Id);
+        }
+
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             var NewItemPage = new NewItemPage();

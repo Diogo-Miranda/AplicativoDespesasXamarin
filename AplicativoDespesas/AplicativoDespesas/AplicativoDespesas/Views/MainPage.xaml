@@ -16,8 +16,10 @@
                         <StackLayout>
                             <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
                                 <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="0"/>
-                                <Label Text="{Binding valor}" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding parcelas}" Grid.Row="0" Grid.Column="1"/>
                                 <Label Text="{Binding data}" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding valor}" Grid.Row="0" Grid.Column="3" TextColor="Red"/>
+                                <Button x:Name="{Binding id}"  Text="Pagar" Grid.Row="0" Grid.Column="4" Clicked="Pagar_Clicked"/>
                             </Grid>
                         </StackLayout>
                     </ViewCell>
