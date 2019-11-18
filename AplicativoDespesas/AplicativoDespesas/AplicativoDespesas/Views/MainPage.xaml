@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplicativoDespesas.Views.MainPage"
+             Title="Despesas">
+
+    <StackLayout>
+        <Button Text="Add" Clicked="AddItem_Clicked"/>
+        <ListView x:Name="ListDespesas">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                                <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding valor}" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding data}" Grid.Row="0" Grid.Column="2"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

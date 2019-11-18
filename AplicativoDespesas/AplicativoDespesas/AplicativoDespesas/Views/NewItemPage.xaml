@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplicativoDespesas.Views.NewItemPage"
+             Title="Cadastrar Despesa">
+
+    <StackLayout>
+        <Label Text="Nome" FontSize="Medium"></Label>
+        <Entry x:Name="EntryNome" FontSize="Small"/>
+        <Label Text="Valor" FontSize="Medium"></Label>
+        <Entry x:Name="EntryValor" FontSize="Small"/>
+
+        <StackLayout Margin="10">
+            <Label Text="Data Limite despesa:" />
+
+            <DatePicker
+                 x:Name="DataPicker"
+                 MinimumDate="01/01/2019" 
+                 MaximumDate="01/01/2100"
+                 Format="dd/MM/yyyy"
+             />
+        </StackLayout>
+
+        <Label Text="Parcelas" FontSize="Medium"></Label>
+        <Entry x:Name="EntryParcelas" FontSize="Small"/>
+        
+        <Button Text="Salvar" Clicked="Save_Clicked"/>
+        <Button Text="Cancelar" Clicked="Cancel_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>
